@@ -11,7 +11,6 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-// 테이블 링크, nullable, 유효성 검사
 @Getter
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

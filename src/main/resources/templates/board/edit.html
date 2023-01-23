@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>게시판 - 글 수정</title>
-  <link rel="stylesheet" href="/webjars/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 <header th:insert="common/header.html"></header>
@@ -120,11 +120,11 @@
       <label for="input_content1" class="col-sm-2 col-form-label"><strong>내용</strong></label>
       <div class="col-sm-10">
         <input
-                    type="text"
-                    name="input_content"
-                    class="form-control"
-                    id="input_content1"
-                    th:value="${post.input_content}"
+                type="text"
+                name="input_content"
+                class="form-control"
+                id="input_content1"
+                th:value="${post.input_content}"
         />
       </div>
     </div>

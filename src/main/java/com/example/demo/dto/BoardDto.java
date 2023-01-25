@@ -3,6 +3,7 @@ package com.example.demo.dto;
 import com.example.demo.domain.entity.Board;
 import lombok.*;
 
+import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 
 @Getter
@@ -11,16 +12,36 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class BoardDto {
     private Long id;
+
+    @NotBlank(message = "필수 입력 값입니다.")
     private String study_project;
+
+    @NotBlank(message = "숫자만 입력이 가능합니다.")
     private String person_num;
+
+    @NotBlank(message = "온라인 또는 오프라인만 선택할 수 있습니다.")
     private String online_offline;
+
+    @NotBlank(message = "숫자만 입력이 가능합니다.")
     private String duration;
+
+    @NotBlank(message = "필수 입력 값입니다.")
     private String skill;
+
+    @NotBlank(message = "필수 입력 값입니다.")
     private String date;
+
+    @NotBlank(message = "필수 입력 값입니다.")
     private String calling;
+
+    @NotBlank(message = "필수 입력 값입니다.")
     private String title;
+
+    @NotBlank(message = "필수 입력 값입니다.")
     private String input_content;
+
     private LocalDateTime createdDate;
+    
     private LocalDateTime modifiedDate;
 
     public Board toEntity() {

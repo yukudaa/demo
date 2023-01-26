@@ -4,6 +4,7 @@ import com.example.demo.domain.entity.Board;
 import lombok.*;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import java.time.LocalDateTime;
 
 @Getter
@@ -23,6 +24,7 @@ public class BoardDto {
     private String online_offline;
 
     @NotBlank(message = "숫자만 입력이 가능합니다.")
+//    @Pattern(regexp = "(?=.*[0-9])",message  ="숫자만 사용가능")
     private String duration;
 
     @NotBlank(message = "필수 입력 값입니다.")
@@ -41,7 +43,7 @@ public class BoardDto {
     private String input_content;
 
     private LocalDateTime createdDate;
-    
+
     private LocalDateTime modifiedDate;
 
     public Board toEntity() {
